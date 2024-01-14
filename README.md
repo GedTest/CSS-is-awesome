@@ -2,4 +2,4 @@ I am going to recreate some beautiful CSS widgets I've seen on the internet, bec
 
 ![CSS IS AWESOME][css]
 
-[css]: https://css-tricks.com/wp-content/uploads/2021/04/css-is-awesome.jpgicon48.png "CSS IS AWESOME"
+[css]: https://miro.medium.com/v2/resize:fit:750/format:webp/1*-tt1ynFdSbj9dn0lkQ4M4w.pngpng "CSS IS AWESOME"
