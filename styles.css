@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.awesome {
+  width: 12vw;
+  padding: 1vw;
+  border: 0.3em solid black;
+  color: black;
+  font-size: 4vw;
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+a {
+  color: black;
+  font-size: 2rem;
+  padding-top: 15%;
+  margin: 0 5%;
+}
+a:hover {
+  background-image: linear-gradient(45deg, blue, red);
+  background-clip: text;
+  color: transparent;
+}
