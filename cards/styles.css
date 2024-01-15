@@ -1,0 +1,63 @@
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  margin: 1rem;
+  border: 1px solid white;
+  width: 28vw;
+  height: 28vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .crypted-card {
+  border-radius: 2em;
+  width: 88%;
+  height: 93%;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.7s;
+  opacity: 0;
+}
+.container:hover .revealing-cursor {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 10%, black 40%);
+}
+.container:hover .crypted-card {
+  opacity: 1;
+}
+.title {
+  color: white;
+  text-align: center;
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5%;
+  border-radius: 100%;
+}
+.text {
+  background-image: radial-gradient(circle, #4327a5 20%, #a04191 40%, white);
+  background-clip: text;
+  background-size: 200% 200%;
+  color: transparent;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.revealing-cursor {
+  position: absolute;
+  pointer-events: none;
+  cursor: none;
+  width: 100vw;
+  height: 100vw;
+  border-radius: 100%;
+}
+.row {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
