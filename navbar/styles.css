@@ -1,0 +1,128 @@
+.css-is-awesome-body {
+  background-image: url('../css-is-awesome.png');
+  background-repeat: no-repeat;
+}
+.navbar {
+  cursor: default;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #f0f0f070;
+  border-radius: 1rem;
+  -webkit-backdrop-filter: blur(36px);
+  backdrop-filter: blur(36px);
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  width: 57%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+.navbar .nav-expand {
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2vw;
+}
+.navbar .nav-expand .nav-expand-plus {
+  transition: transform 0.2s ease;
+  color: rgba(50, 50, 50, 0.3);
+  font-size: 3em;
+  font-weight: 200;
+}
+.navbar .nav-expand a {
+  width: 14%;
+}
+.navbar .nav-expand .nav-logo img {
+  width: 100%;
+  height: auto;
+}
+.nav-column {
+  display: flex;
+  flex-direction: column;
+}
+.nav-column:not(:first-child) {
+  margin-left: 10vw;
+}
+.nav-column a {
+  color: black;
+  text-decoration: none;
+  padding-top: 1.5rem;
+}
+.nav-column a:hover {
+  background-image: linear-gradient(45deg, blue, red);
+  background-clip: text;
+  color: transparent;
+}
+.nav-item-title {
+  color: grey;
+}
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(50, 50, 50, 0.3);
+  font-size: 0.95rem;
+  height: 55vh;
+  transition: height 0.2s ease-out;
+}
+.nav-container .nav-columns {
+  flex: 40%;
+  display: flex;
+  padding: 3vw;
+  padding-bottom: 0;
+}
+.nav-container .nav-img-container {
+  user-select: none;
+  flex: 30%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-container .nav-img-container img {
+  transition: transform 0.3s ease, opacity 0.01s;
+  opacity: 1;
+  transform: translateX(0%);
+}
+.nav-container .nav-bottom {
+  flex: 30%;
+  border-top: 1px solid rgba(50, 50, 50, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-container .nav-bottom a {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  background-color: transparent;
+  border: 1px solid rgba(50, 50, 50, 0.3);
+  border-radius: 1.2rem;
+  color: black;
+}
+.nav-container .nav-bottom a:hover {
+  background-image: linear-gradient(45deg, blue, red);
+  background-clip: text;
+  color: transparent;
+}
+.nav-collapsed.nav-container {
+  height: 0;
+  border-top: none;
+}
+.nav-collapsed .nav-columns,
+.nav-collapsed .nav-bottom {
+  display: none;
+}
+.nav-collapsed .nav-img-container img {
+  transform: translateX(100%);
+  opacity: 0;
+}
+.nav-collapsed .nav-expand-plus {
+  transform: rotate(45deg);
+}
+@media screen and (max-width: 1024px) {
+  .navbar {
+    width: 95%;
+  }
+}

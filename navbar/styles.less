@@ -1,0 +1,164 @@
+@transparent: rgba(50, 50, 50, 0.3);
+
+
+.css-is-awesome-body {
+    background-image: url('../css-is-awesome.png');
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    cursor: default;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    background-color: #f0f0f070;
+    border-radius: 1rem;
+    -webkit-backdrop-filter: blur(36px);
+    backdrop-filter: blur(36px);
+
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    width: 57%;
+    transform: translateX(-50%);
+    z-index: 999;
+
+    
+    & .nav-expand {
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 2vw;
+
+        & .nav-expand-plus {
+            transition: transform 0.2s ease;
+            color: @transparent;
+            font-size: 3em;
+            font-weight: 200;
+        }
+
+        & a {
+            width: 14%;
+        }
+        
+        & .nav-logo img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+.nav-column {
+    display: flex;
+    flex-direction: column;
+    
+    &:not(:first-child) {
+        margin-left: 10vw;
+    }
+
+    & a {
+        color: black;
+        text-decoration: none;
+        padding-top: 1.5rem;
+    }
+
+    & a:hover {
+        background-image: linear-gradient(45deg, blue, red);
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.nav-item-title {
+    color: grey;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid @transparent;
+    font-size: 0.95rem;
+
+    height: 55vh;
+    transition: height 0.2s ease-out;
+
+    .nav-columns {
+        flex: 40%;
+        display: flex;
+        padding: 3vw;
+        padding-bottom: 0;
+        
+    }
+
+    .nav-img-container {
+        user-select: none;
+        flex: 30%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-end;
+        
+        img {
+            transition: transform 0.3s ease, opacity 0.01s;
+            opacity: 1;
+            transform: translateX(0%);
+        }
+    }
+
+    .nav-bottom {
+        flex: 30%;
+        border-top: 1px solid @transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            padding: 0.5rem 1.2rem;
+            background-color: transparent;
+            border: 1px solid @transparent;
+            border-radius: 1.2rem;
+            color: black;
+
+            &:hover {
+                background-image: linear-gradient(45deg, blue, red);
+                background-clip: text;
+                color: transparent;
+            }
+        }
+    }
+}
+
+.nav-collapsed {
+    
+    &.nav-container {
+        height: 0;
+        border-top: none;
+    }
+
+    & .nav-columns, .nav-bottom {
+        display: none;
+    }
+
+    & .nav-img-container img {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    .nav-expand-plus {
+        transform: rotate(45deg);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        width: 95%;
+    }
+}
+
+
+// https://atlascard.com/
